@@ -80,7 +80,6 @@ class HBNBCommand(cmd.Cmd):
     def do_create(self, arg):
         """
         Creates new instance of BaseModel and save it to the JSON file.
-        Usage: create <class_name>
         """
         commands = shlex.split(arg)
 
@@ -96,7 +95,6 @@ class HBNBCommand(cmd.Cmd):
     def do_show(self, arg):
         """
         Shows string representation of an instance.
-        Usage: show <class_name> <id>
         """
         commands = shlex.split(arg)
 
@@ -118,7 +116,6 @@ class HBNBCommand(cmd.Cmd):
     def do_destroy(self, arg):
         """
         Deletes an instance based on the class name and id.
-        Usage: destroy <class_name> <id>
         """
         commands = shlex.split(arg)
 
@@ -140,8 +137,6 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, arg):
         """
         Prints string representation of all instances or a specific class.
-        Usage: <User>.all()
-                <User>.show()
         """
         objects = storage.all()
 
@@ -160,7 +155,6 @@ class HBNBCommand(cmd.Cmd):
     def do_count(self, arg):
         """
         Counts and retrieves number of instances of a class
-        usage: <class name>.count()
         """
         objects = storage.all()
 
@@ -185,7 +179,6 @@ class HBNBCommand(cmd.Cmd):
     def do_update(self, arg):
         """
         Updates an instance by add or updat an attribute.
-        Usage: update <class_name> <id> <attribute_name> "<attribute_value>"
         """
         commands = shlex.split(arg)
 
